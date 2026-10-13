@@ -1,0 +1,48 @@
+\documentclass{standalone}
+\usepackage{circuitikz}
+\usepackage[scaled]{helvet}
+\usepackage[T1]{fontenc}
+\renewcommand\familydefault{\sfdefault}
+
+
+\begin{document}
+
+\begin{circuitikz}[anchor=center]
+    
+\draw (0,0) node[dipchip,
+    num pins=8,
+    external pins width=0.9,
+    scale = 2,
+    external pad fraction=4,
+    align=center ](C){};
+    
+\draw (C.west) node[anchor=north,rotate=90, inner sep=1.5em]{\Large UASTW};
+\draw (C.east) node[anchor=north,rotate=-90, inner sep=1.5em]{\Large DPS368};
+    
+\draw[-latex] (C.pin 1) -- ++(-1,0) node[anchor=east]{GND};
+\node [left,anchor=east] at (C.bpin 1) {GND};
+
+\draw[-latex] (C.pin 2) -- ++(-1,0) node[anchor=east](SDO){POCI};
+\node [left,anchor=east] at (C.bpin 2) {SDO/INT/AD0};
+
+\draw[latex-] (C.pin 3) -- ++(-1,0) node[anchor=east] {SCK};
+\node [left,anchor=east] at (C.bpin 3) {SCL/SCK};
+
+\draw[latex-] (C.pin 4) -- ++(-1,0) node[anchor=east] {PICO};
+\node [left,anchor=east] at (C.bpin 4) {SDI/SDA};
+
+\draw (C.pin 5) -| ++(1,-1) node[ground] {};
+\node [right,anchor=west] at (C.bpin 5) {GND};
+
+\draw[latex-](C.pin 6) -- ++(1,0) node[anchor=west]{\#CS};
+\node [right,anchor=west] at (C.bpin 6) {CSB};
+
+\draw[latex-] (C.pin 7) -- ++(1,0) node[anchor=west] {VDDIO};
+\node [right,anchor=west] at (C.bpin 7) {VDDIO};
+
+\draw[latex-] (C.pin 8) -- ++(1,0) node[anchor=west] {VDD};
+\node [right,anchor=west] at (C.bpin 8) {VDD};
+
+\end{circuitikz}
+
+\end{document}
