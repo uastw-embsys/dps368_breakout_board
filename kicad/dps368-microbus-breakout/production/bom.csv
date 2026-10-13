@@ -1,0 +1,4 @@
+﻿Designator,Footprint,Quantity,Value,LCSC Part #
+CON1,MIKROBUS_MODULE_CONN,1,MIKROBUS_MODULE_CONN,
+J1,DIP-8_W10.16mm_LongPads,1,Conn_02x04_Counter_Clockwise,
+"R1, R2",0603,2,4k7,
