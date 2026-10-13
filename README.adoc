@@ -1,0 +1,27 @@
+== DrohnFH DPS368 Breakout Board
+
+This breakout board connects all the pins of the Infineon DPS368 barometric pressure sensor IC to a DIP-8 footprint.
+
+[frame="none",grid="none",cols="^.^4,^.^9,width="100%"]
+|====
+| image:docs/dps368_breakout.png[] | image:docs/dps368_breakout.jpg[]
+|====
+
+WARNING: To keep routing as simple as possible, it does *not* follow the
+conventional DIP pin assignment! Please use the connection diagrams below
+to connect the breakout board correctly.
+
+The breakout board's pin assignment can be found in its link:datasheet/datasheet.pdf[Datasheet].
+
+For further details see the sensor's datasheet (https://www.infineon.com/assets/row/public/documents/30/49/infineon-dps368-datasheet-en.pdf)
+
+=== Acknowledgement
+
+This work was supported by the City of Vienna via the project 
+_Stadt Wien Kompetenzteam für Drohnentechnik in der Fachhochschulausbildung_,
+MA23 Projekt Nr. 35-02.
+
+[grid="none",frame="none"]
+|====
+| image:docs/drohnfh_logo_80.png[] | image:docs/ma23_80.png[] | image:docs/fhtw_80.png[]
+|====
